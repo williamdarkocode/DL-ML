@@ -79,3 +79,41 @@ a = np.array([1+2j, 3+4j, 5+6*1j])
 print(a[2]) #5.+6.j
 a.dtype # "dtype('complex128')"
 
+#Indexing and Slicing
+a = np.arange(10) #array([0, 1, 2, 3, 4, 5, 6, 7, 8 , 9])
+a[0] # 0
+a[7] # 7
+a[-1] # 9
+a[-4] #6
+
+
+a[::1] #array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+a[::-1] #reverses the array; whats really happening is the we're accessing elements starting from the back with a step count of 1
+
+print(a[::2]) #array([0, 2, 4, 6, 8]) every other element
+print(a[2::2]) #start form the second element and access every other element
+print(a[-2::-2]) #a reversed array starting form the second to last, acessing every othe element in reverse
+print(a[:7]) #everything up until but not including the 7th index
+print(a[3:]) #everything following the 3rd index including the element at the 3rd index
+print(a[1:8:1]) #syntax (start, end, step size) start at the first number, and at the sencond (not inclusive), with a step size of the 3rd number
+
+a[:4] = 10 # assign all the values before index 4 (not inclusive) the number 10
+print(a)
+a[4:] = 7 #assign all elements from index 4, including the element at index 4, the value of 7
+print(a)
+print('\n')
+
+b = np.diag(a) #a diagonal matrix with diagonal entries as the elements of array a
+print(b)
+print('\n')
+
+print(b[:2]) #the rows before the 2nd row (not inclusive of the second row)
+print(b[::2]) #print every other row
+print(b[::3]) #print every fourth (row at index 3) row
+print(b[3::2]) #print every other row starting from the fourth (row at index 3 and every other row after)
+print('\n')
+
+print(b[::2, ::2]) #for every other row, access every other column
+print('\n')
+print(b[3:6,2:7]) #get the image of the matrix fromed by the 3-5th row, and 2nd-6th column
+print(b[(0,1,2,3,4,5,6,7,8,9), (0,1,2,3,4,5,6,7,8,9)]) # get the diagonals entries of the matrix
