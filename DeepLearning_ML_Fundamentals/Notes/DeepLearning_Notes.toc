@@ -2,3 +2,4 @@
 \contentsline {section}{\numberline {2}Resources}{4}%
 \contentsline {section}{\numberline {3}What is deep learning?}{5}%
 \contentsline {subsection}{\numberline {3.1}Artificial Intelligence}{5}%
+\contentsline {subsection}{\numberline {3.2}Learning representations from data}{6}%

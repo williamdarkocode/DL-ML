@@ -1,8 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1623690003 "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.tex" "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.pdf" "DeepLearning_Notes" 1623690017
+["pdflatex"] 1623855573 "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.tex" "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.pdf" "DeepLearning_Notes" 1623855596
   "./figures/AI_Umbrella.png" 1623689368 43005 248df2b2da1bae5be8d6ae00e780adc5 ""
-  "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.aux" 1623690004 428 e63e47f37e68c7a2e478bc6a7c9febd5 ""
-  "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.tex" 1623690003 1690 87e0b2bb1ebaa355b4ada30fc3c9b91c ""
+  "./figures/ML_new_paradigm.png" 1623854736 19409 21c3b6cce8825a30d998506b3acf0525 ""
+  "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.aux" 1623855574 553 247fc10721858505f44ae015c3d134f5 ""
+  "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.tex" 1623855573 2968 c1d4929219d085cefa060b2ece00c3c7 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -58,14 +59,15 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1586288259 2432462 fd0fa20e9a3cb5f8169fd0ba1c955158 ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "DeepLearning_Notes.aux" 1623690004 428 e63e47f37e68c7a2e478bc6a7c9febd5 "pdflatex"
-  "DeepLearning_Notes.tex" 1623690003 1690 87e0b2bb1ebaa355b4ada30fc3c9b91c ""
-  "DeepLearning_Notes.toc" 1623690004 256 7d622748920d818815aecf8b863b671e "pdflatex"
+  "DeepLearning_Notes.aux" 1623855574 553 247fc10721858505f44ae015c3d134f5 "pdflatex"
+  "DeepLearning_Notes.tex" 1623855573 2968 c1d4929219d085cefa060b2ece00c3c7 ""
+  "DeepLearning_Notes.toc" 1623855574 340 325d3694ad6c9865471cbbc1e38c2c20 "pdflatex"
   "figures/AI_Umbrella.png" 1623689368 43005 248df2b2da1bae5be8d6ae00e780adc5 ""
+  "figures/ML_new_paradigm.png" 1623854736 19409 21c3b6cce8825a30d998506b3acf0525 ""
   (generated)
-  "DeepLearning_Notes.log"
   "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.log"
-  "DeepLearning_Notes.pdf"
   "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.pdf"
+  "DeepLearning_Notes.log"
   "DeepLearning_Notes.aux"
   "DeepLearning_Notes.toc"
+  "DeepLearning_Notes.pdf"
