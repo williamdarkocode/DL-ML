@@ -33,3 +33,6 @@ cv2.imwrite(args["output"], img)
 result_img = cv2.imread(args["output"])
 cv2.imshow("Shape count: ", result_img)
 cv2.waitKey(0)
+
+# conda update:
+# conda update -n base -c defaults conda
