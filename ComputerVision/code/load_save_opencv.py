@@ -21,4 +21,4 @@ cv2.imwrite(args["dest"], image) # write the image to the value with key "dest" 
 # if destination file doesn't exist at path, imwrite creates it at the given path
 
 cv2.waitKey(0)
-#  new directory
+#  new dir

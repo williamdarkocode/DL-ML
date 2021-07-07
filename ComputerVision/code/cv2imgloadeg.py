@@ -8,4 +8,4 @@ print(image.shape)
 
 cv2.imshow("Image", image)
 cv2.waitKey(0)
-#  new directory
+#  new dir
