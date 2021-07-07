@@ -39,5 +39,5 @@ cv2.imshow("br_corner", b_r_corner)
 cv2.imshow("edited image", image)
 
 
-
+# new dir
 cv2.waitKey(0)

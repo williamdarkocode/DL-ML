@@ -20,3 +20,4 @@ print(arguments)
 # display a message using the arguments passed via cmd line input
 print("Hello {}, welcome to your virtual world, where all things are possible.".format(arguments["name"]))
 # args['key'] gives you the value associated with the given key in the dictionary
+# new dir
