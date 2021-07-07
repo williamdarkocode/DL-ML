@@ -39,4 +39,4 @@ while dim >= 1:
 
 cv2.imshow("abstract art", canvas)
 cv2.waitKey(0)
-# new dir
+#  new directory
