@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  16 JUN 2021 10:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  15 JUL 2021 14:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -149,35 +149,104 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.toc)
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.toc [2])
 \tf@toc=\write3
 \openout3 = `DeepLearning_Notes.toc'.
 
- [2] [3] [4]
-<./figures/AI_Umbrella.png, id=19, 458.71375pt x 315.1775pt>
+ [3] [4] [5]
+<./figures/AI_Umbrella.png, id=22, 458.71375pt x 315.1775pt>
 File: ./figures/AI_Umbrella.png Graphic file (type png)
 <use ./figures/AI_Umbrella.png>
 Package pdftex.def Info: ./figures/AI_Umbrella.png  used on input line 53.
 (pdftex.def)             Requested size: 227.62204pt x 156.39568pt.
-<./figures/ML_new_paradigm.png, id=21, 370.38374pt x 221.82875pt>
+<./figures/ML_new_paradigm.png, id=24, 370.38374pt x 221.82875pt>
 File: ./figures/ML_new_paradigm.png Graphic file (type png)
 <use ./figures/ML_new_paradigm.png>
 Package pdftex.def Info: ./figures/ML_new_paradigm.png  used on input line 78.
 (pdftex.def)             Requested size: 170.71652pt x 102.24554pt.
- [5 </Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/AI_Umbrella.png> </Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/ML_new_paradigm.png>] [6] (/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.aux) ) 
+ [6 </Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/AI_Umbrella.png> </Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/ML_new_paradigm.png>] [7]
+<./figures/training_loop_dnn.png, id=35, 921.4425pt x 436.63126pt>
+File: ./figures/training_loop_dnn.png Graphic file (type png)
+<use ./figures/training_loop_dnn.png>
+Package pdftex.def Info: ./figures/training_loop_dnn.png  used on input line 151.
+(pdftex.def)             Requested size: 341.43306pt x 161.78421pt.
+ [8] [9 </Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/training_loop_dnn.png>]
+<./figures/timeseries_data.png, id=43, 402.50375pt x 187.70125pt>
+File: ./figures/timeseries_data.png Graphic file (type png)
+<use ./figures/timeseries_data.png>
+Package pdftex.def Info: ./figures/timeseries_data.png  used on input line 210.
+(pdftex.def)             Requested size: 284.52756pt x 132.68454pt.
+<./figures/image_data.png, id=44, 480.79625pt x 401.5pt>
+File: ./figures/image_data.png Graphic file (type png)
+<use ./figures/image_data.png>
+Package pdftex.def Info: ./figures/image_data.png  used on input line 218.
+(pdftex.def)             Requested size: 227.62204pt x 190.08345pt.
+ [10 </Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/timeseries_data.png>] [11 </Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/image_data.png>]
+Overfull \hbox (2.62808pt too wide) in paragraph at lines 248--250
+[]\OT1/cmr/m/it/12 categorical[]crossentropy \OT1/cmr/m/n/12 is al-most al-ways the loss func-tion used in single-
+ []
+
+
+Overfull \hbox (85.42851pt too wide) in paragraph at lines 250--252
+\OT1/cmr/m/n/12 cat-e-gor-i-cal crossen-tropy, or leave data as in-te-gers and use \OT1/cmr/m/it/12 sparse[]categorical[]crossentropy 
+ []
+
+[12]
+Overfull \hbox (4.90227pt too wide) in paragraph at lines 299--301
+[]\OT1/cmr/bx/n/12 autoencoders \OT1/cmr/m/n/12 are well-known in-stance of self-supervised learn-ing where
+ []
+
+[13] [14] [15]
+<./figures/hold_out_validation.png, id=67, 683.55376pt x 304.13625pt>
+File: ./figures/hold_out_validation.png Graphic file (type png)
+<use ./figures/hold_out_validation.png>
+Package pdftex.def Info: ./figures/hold_out_validation.png  used on input line 383.
+(pdftex.def)             Requested size: 341.43306pt x 151.91924pt.
+<./figures/hold_out_validation_snippet.png, id=68, 907.39pt x 436.63126pt>
+File: ./figures/hold_out_validation_snippet.png Graphic file (type png)
+<use ./figures/hold_out_validation_snippet.png>
+Package pdftex.def Info: ./figures/hold_out_validation_snippet.png  used on input line 384.
+(pdftex.def)             Requested size: 341.43306pt x 164.29596pt.
+ [16 </Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/hold_out_validation.png> </Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/hold_out_validation_snippet.png>]
+<./figures/k_folds_validation_scheme.png, id=74, 787.94376pt x 386.44376pt>
+File: ./figures/k_folds_validation_scheme.png Graphic file (type png)
+<use ./figures/k_folds_validation_scheme.png>
+Package pdftex.def Info: ./figures/k_folds_validation_scheme.png  used on input line 404.
+(pdftex.def)             Requested size: 284.52756pt x 139.5442pt.
+<./figures/k_folds_validation_snip1.png, id=75, 911.405pt x 453.695pt>
+File: ./figures/k_folds_validation_snip1.png Graphic file (type png)
+<use ./figures/k_folds_validation_snip1.png>
+Package pdftex.def Info: ./figures/k_folds_validation_snip1.png  used on input line 406.
+(pdftex.def)             Requested size: 341.43306pt x 169.96906pt.
+<./figures/k_folds_validation_snip2.png, id=76, 856.19875pt x 144.54pt>
+File: ./figures/k_folds_validation_snip2.png Graphic file (type png)
+<use ./figures/k_folds_validation_snip2.png>
+Package pdftex.def Info: ./figures/k_folds_validation_snip2.png  used on input line 408.
+(pdftex.def)             Requested size: 341.43306pt x 57.63852pt.
+ [17 </Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/k_folds_validation_scheme.png> </Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/k_folds_validation_snip1.png> </Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/k_folds_validation_snip2.png>]
+Overfull \hbox (12.7695pt too wide) in paragraph at lines 426--426
+[]\OT1/cmr/bx/n/14.4 Things to con-sider while choos-ing eval-u-a-tion method 
+ []
+
+
+Overfull \hbox (19.53293pt too wide) in paragraph at lines 455--455
+[]\OT1/cmr/bx/n/14.4 Preprocessing, fea-ture en-gi-neer-ing, and fea-ture learn-
+ []
+
+[18] [19] [20] [21] (/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.aux) ) 
 Here is how much of TeX's memory you used:
- 3538 strings out of 480608
- 51019 string characters out of 5903631
- 284203 words of memory out of 5000000
- 19412 multiletter control sequences out of 15000+600000
- 541785 words of font info for 60 fonts, out of 8000000 for 9000
+ 3845 strings out of 480608
+ 54611 string characters out of 5903631
+ 289203 words of memory out of 5000000
+ 19710 multiletter control sequences out of 15000+600000
+ 542144 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,6n,36p,294b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.pdf (6 pages, 107048 bytes).
+ 30i,6n,36p,294b,1111s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.pdf (21 pages, 469636 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
