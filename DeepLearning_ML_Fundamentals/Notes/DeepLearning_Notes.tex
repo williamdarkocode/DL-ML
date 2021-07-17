@@ -193,7 +193,7 @@ on learning representations from data with emphasis on
    \item \textbf{Data type}: The typeof data contained in the tensors.
    \item \textbf{Data batches}: the 0th axis of a tensor, is usually called the 
    \textbf{samples axis, or samples dimension}. The number of samples are usually split into 
-   n equal parts, called batches. Nerual nets usually don't process an entire dataset at once; training of a neural net 
+   n equal parts, called batches. Neural nets usually don't process an entire dataset at once; training of a neural net 
    is done in these data batches; partitions of the total number of samples.
 \end{enumerate}
 
@@ -231,7 +231,7 @@ Data in deep learning will almost always fall into one of these categories:
    end with dense layer on one hidden unit, and sigmoid activation
    \item Sequences of words can be encoded as binary vectors. Other encoding
    options can be used to fulfill the bit of preprocessing that needs to be done
-   on the data before feeding it as tensors into the nerual network.
+   on the data before feeding it as tensors into the neural network.
    \item Stacks of \textit{Dense} layers with with \textit{relu}
    activations can solve a wide range of sentiment analysis, and binary classification problems.
    \item When the output in binary classification is a scalar output like 1 or 0,
@@ -456,7 +456,7 @@ is available, K-folds validation is an appropriate approach.
 \paragraph*{}
 The aim with preoprocessing is to make data more suitable for neural networks;
 whether its via vectorisation, normalisation, or handling missing values, feature
-extraction, raw data shouldn't be passed directly into nerual networks.
+extraction, raw data shouldn't be passed directly into neural networks.
 
 \subsubsection{Vectorisation}
 \begin{enumerate}
@@ -471,7 +471,7 @@ extraction, raw data shouldn't be passed directly into nerual networks.
    \item Normaliing features independently so they have standard deviations of 1, and mean of 0
    \item Generally considered because its unsafe to feed neural networks data that take 
    relatively large values or heterogeneous data where data points take values in a different ranges.
-   \item heterogeneous data should be normalised to acheive standard deviation of 1, and mean of 0 before
+   \item heterogeneous data should be normalised to achieve standard deviation of 1, and mean of 0 before
    fed into neural networks.
    \item normalisation is necessary to prevent large gradient updates that disallow network from converging.
    \item  Take small values; most values should be in range 0-1
@@ -529,7 +529,7 @@ small number of patterns, the \textbf{optimisation process froces the model to f
 the most prominent, hence, most important data patterns}. This offers a better chance 
 of generalisation.
 
-\subsubsection{Reducing size of the network}
+\subsection{Reducing size of the network}
 \begin{enumerate}
    \item One of the simplest way to prevent overfitting is to reduce the size of the model;
    \textbf{the number of learnable parameters in the model, which are determined by the number of 
@@ -545,7 +545,7 @@ of generalisation.
 \end{enumerate}
 
 
-\subsubsection{Adding weight regularisation}
+\subsection{Adding weight regularisation}
 \begin{enumerate}
    \item \textbf{\textit{Simple model}} is one where the distribution of parameter values has less entropy;
    thus one with fewer parameters.
@@ -554,8 +554,153 @@ of generalisation.
    \textbf{\textit{regular}}.
    \item This technique of adding constraints to the complexity of the network is called 
    \textbf{\textit{weight regularisation}}. It involves \textbf{adding to the loss function, a cost associated with having large weights}.
-   
+   \item weight regularisation \textit{costs} come in two flavours:
+   \subitem \textbf{\textit{L1 regularisation}}: The cost added to the loss function is proportional 
+   to the \textbf{\textit{absolute value of the weight coefficients (L1 norm of the weights)}}
+   \subitem \textbf{\textit{L2 regularisation}}: The cost added to the loss function is 
+   proportional to the \textbf{\textit{square of the value of the weight coefficients (L2 norm of the weights)}}.
+   L2 regularisation is also known as \textbf{\textit{weight decay}} in the context of neural networks.
+
+   \item In Keras, weight regularisation is added via pssing \textbf{weight regularizer instances} to layers as keyword arguments.
+
+   {
+      \centering
+      \includegraphics[width=13cm]{weight_regularizer_instance.png}
+
+   }
+
 \end{enumerate}
+
+\subsection{Adding dropout}
+\begin{enumerate}
+   \item Dropout is one of the most effective, most commonly used regularisation techniques in for neural networks.
+   \item Consists of \textbf{randomly \textit{dropping out} (setting to zero)} a number of output features of the layer during training.
+   \item \textbf{\textit{dropout rate}} is the fraction of features zeroed out; usually between $0.2$ and $0.5$
+   \item At test time, no units are droopped out; instead, layer's outputs are scaled down by factor equivalent to dropout rate.
+   \item Units are scaled down during test time to balance out for the fact that more units are active than at training time.
+   \item The idea behind the dropout technique is that \textbf{introducing noise in the output values 
+   of a layer can break up patterns that are insignificant to the network}. This prevents the network from 
+   memorising irrelevant patterns.
+   \item In Keras, dropout is implemented via the \lstinline{Dropout} layer,
+   which is applied to the output of the layer immediately preceeding it.
+
+   {
+      \centering
+      \includegraphics[width=13cm]{dropout_keras_implementation.png}
+
+   }
+
+\subsection{Recap}
+\paragraph*{}
+Generally, the most common ways to prevent overfitting in neural networks:
+\begin{itemize}
+   \item Getting \textbf{more training data}. Network would naturally generalise this way.
+   \item \textbf{Reducing the capacity of the network}. 
+   \item Adding \textbf{weight regularisation}.
+   \item Adding \textbf{dropout}
+\end{itemize}
+
+\end{enumerate}
+
+
+\section{Universal machine learning workflow}
+\paragraph*{}
+Defining the problem, evaluating the model, feature engineering, mitigating overfitting.
+\subsection{Problem Definition}
+\begin{itemize}
+   \item We must first define the task/problem at hand 
+   \item What will our inputs be?
+   \item What are we trying to predict?
+   \item What type of problem are we facing (regression, binary classification, multiclass classification etc).
+\end{itemize}
+To move on to the next step, it's crucial to know what our inputs, and outputs are, and what data 
+we're going to be using. We make certain hypotheses at this stage: 
+\begin{itemize}
+   \item Hypothesise that ou puts can be predicted given inputs
+   \item Hypothesise that available data is sufficiently informative to learn relationships between inputs and outputs 
+\end{itemize}
+
+
+\subsection{Choosing a measure of success}
+\paragraph*{}
+To control something, we must be able to observe it. We must define what we 
+mean by success. Is it accuracy of the model's predictions, precision and recall, customer retention, etc.
+Our metric of success will \textbf{guide what we choose for our loss function; what our model will optimise}.
+Metric of success \textbf{should align with higher level goals}, such as success of a business.
+
+\begin{itemize}
+   \item \textbf{For balanced-classification problems}, where all classes are equally likely to be mapped to an input, a metric 
+   like \textbf{accuracy} or \textbf{\textit{area under the receiver operating characteristic curve (ROC AUC)}} are common metrics to use.
+   \item \textbf{For class-imbalanced problems}, its common to use \textbf{precision and recall} as metrics of success.
+   \item \textbf{For ranking problems, or multi-label classification}, we can use \textbf{mean average precision}.
+   \item It's also quite common to define custom metrics of success.
+\end{itemize}
+
+
+\subsection{Choosing an evaluation protocol}
+\paragraph*{}
+Once we know what we're trying to measure, and what our data is, we must pick 
+a way to measure our current progress; the evaluation protocol.
+\begin{itemize}
+   \item \textbf{\textit{Hold-out validation set}}: the way to go when there's plenty of data 
+   \item \textbf{\textit{K-fold cross validation}}: When not enough data is present for hold-out technique
+   \item \textbf{\textit{Iterated K-fold validation}}: When you want highly accurate model evaluation, but little data is present.
+\end{itemize}
+
+\subsection{Preparing the data}
+\begin{itemize}
+   \item Data should be formatted as tensors 
+   \item Values taken by tensors should be scaled to take small values within uniform ranges 
+   \item heterogeneous data should be normalised 
+   \item Do some feature engineering where possible
+\end{itemize}
+
+
+\subsection{Developing a model}
+\paragraph*{}
+Goal here is to develop a model that achieves \textbf{\textit{statistical power}}.
+This means to develop a model that beats the baseline model in terms of performance.
+Three key choices for making first working model:
+
+\begin{enumerate}
+   \item \textbf{\textit{Last-layer activation}}: establishes useful constraints on layer's output 
+   \item \textbf{\textit{Loss function}}: should match the type of problem at hand.
+   \item \textbf{\textit{Optimisation configuration}}: What optimiser will you use, what learning rate will you choose, etc.
+\end{enumerate}
+
+Its not always straightforward to optimise for some metrics of success, or turning
+some metric into a loss function. Loss functions mut be \textbf{differentiable} 
+(otherwise Backpropagation can't be used to train network). Loss functions have to computable with 
+as little as one data point. However, for the most common types of problems, the
+following are sufficient: \\
+
+{
+   \centering
+   \includegraphics[width=15cm]{loss_funcs_per_problem.png}
+
+}
+
+
+\subsection{Developing a model that overfits}
+\paragraph*{}
+To develop the best model for our problem, we must find that sweet spot 
+between an underfit model, and one that overfits. Before we get to this 
+best case model, we must first find the border where overfitting begins.
+We can achieve this fairly easily.
+\begin{enumerate}
+   \item Add layers 
+   \item Make layers bigger
+   \item Train for more epochs
+\end{enumerate}
+Once we observe that the model's performance on validation data begins to degrade,
+we've achieved overfitting.
+
+
+\subsection{Regularising model, tuning hyperparameters}
+\paragraph*{}
+This step will take the most time; repeatedly training the model, evaluating it,
+tuning hyperparameters and the network architecture, over and over again until 
+the best model is achieved.
 
 
 \end{document}
