@@ -137,6 +137,15 @@ INPUT /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./fi
 INPUT /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/loss_funcs_per_problem.png
 INPUT /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/loss_funcs_per_problem.png
 INPUT /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/loss_funcs_per_problem.png
+INPUT /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/spatial_hierarchy_learning.png
+INPUT /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/spatial_hierarchy_learning.png
+INPUT /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/spatial_hierarchy_learning.png
+INPUT /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/concept_response_map.png
+INPUT /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/concept_response_map.png
+INPUT /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/concept_response_map.png
+INPUT /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/how_conv_works.png
+INPUT /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/how_conv_works.png
+INPUT /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/./figures/how_conv_works.png
 INPUT /Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.aux
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
@@ -144,5 +153,6 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb

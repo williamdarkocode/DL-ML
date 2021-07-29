@@ -703,4 +703,234 @@ tuning hyperparameters and the network architecture, over and over again until
 the best model is achieved.
 
 
+\newpage
+
+\section{Part 2: convnets}
+\paragraph*{}
+Convolutional Neural Networks, also known as \textbf{\textit{convnets}} are 
+a type of deep learning model, well known in the field of computer vision.
+
+\begin{enumerate}
+   \item Convnets take input tensors of shape \lstinline{(image_height, image_width, image_channels)}
+   \item In Keras, convnets can be implemented using
+   the \textbf{Conv2D} and \textbf{MaxPooling2D} layers.
+   \item Every output of the Conv2D, and MaxPooling2D layers are 3d tensors 
+   of shape \lstinline{(height, width, channels)}
+\end{enumerate}
+
+\subsection{The convolution operation}
+\paragraph*{}
+While \lstinline{Dense} layers can only learn global patterns in the 
+input feature space (for example patterns involving all pixels),
+\textbf{convolution layers are able to learn local patterns}, that found 
+in \textbf{small windows of the input}. These windows are typically,
+\textbf{2x2 or 3x3} in size.
+
+This key characteristic of learning local patterns in small windows of inputs 
+gives convnets \textbf{two key characteristics}:
+\begin{enumerate}
+   \item \textbf{\textit{The patterns learned are invariant to translation.}}
+   This prevents the inefficiency of re-learning patterns already learnt. For example,
+   if a pattern is learned in the lower left corner of an image, a convnet can recognise that 
+   same pattern anywere else in the image. \textbf{This makes convnets data-efficient},
+   hence why they need fewer training smaples to learn representations.
+
+   \item \textbf{\textit{Ability to learn spatial hierarchies of patterns.}}
+   This means that successive convolution layers learn larger patterns composed of features 
+   learned in the previous layer. For example, the first convolution layer learns curves, lines, and edges, and the second 
+   layer  learns features composed of those lines, curves, etc, learned in the first layer.
+   \textbf{This allows convnets to learn increasingly complex and abstract visual concepts}
+\end{enumerate}
+
+\textbf{The visual world is fundamentally translation invariant, and spatially hierarchial.}
+
+{
+   \centering
+   \includegraphics[width=10cm]{spatial_hierarchy_learning.png}
+
+}
+
+\begin{enumerate}
+\item Convolutions operate over \textbf{3D tensors} called \textbf{\textit{feature maps}}.
+\item \textbf{Feature Maps} have \textbf{2 spatial axes}, and a \textbf{depth} axis.
+\item The depth axis is sometimes called the \textbf{channels axis} like in the case of RGB images.
+\item \textbf{spatial axis}: \textbf{\textit{height, width}}
+\item The convolution operation \textbf{extracts patches} from the input feature map, and
+\textbf{applies the same transformation on all of them}, producing an \textbf{\textit{output feature map}}
+\item Output feature map is also a 3D tensor, with height, and width spatial axis,
+as well as a depth axis. However the depth axis may vary, from layer to layer.
+\item Depth axis can be arbitrary because the depth is a \textbf{parameter of the layer},
+thus different channels in the depth axis no longer stand for RGB, but instead,
+they stand for \textbf{\textit{filters}}
+\item \textbf{Filters} encode specific aspects of the input data. For instance, a 
+single filter can encode the concept of \textbf{``presence of a face''} in the input.
+\end{enumerate}
+
+To look at filters more closely, say a convolution layer takes a feature map of
+shape \textbf{(28, 28, 1)}; thus inputs of size 28 by 28, with 1 colour channel.
+Lets say the convolution outputs a an output feature map of size \textbf{(26, 26, 32)}.
+This in essense means an output feature map of \textbf{32 ouput channels}, but these 32 channles on the depth axis 
+don't account for colour channels, but instead, the \textbf{32 filters computed over the input}.
+Hence, each of these 32 output channels contains a 26 x 26 grid of values, indicating the response of the filter pattern 
+at different locations of the input. This 26 x 26 grid of values is called the \textbf{\textit{response map}} of the filter over the input.
+The 2D tensor: \lstinline{output[:, :, n]} is the spatial map of the response. \\
+
+{
+   \centering
+   \includegraphics[width=10cm]{concept_response_map.png}
+
+}
+
+\textbf{Convolutions are defined by two key parameters:}
+\begin{enumerate}
+   \item \textbf{\textit{Size of the patches extracted from the inputs}}.
+   In other words, the window sizes; these are typically, \textbf{3 x 3 or 5 x 5}
+
+   \item \textbf{\textit{Depth of output feature map}}. In other words, the number of filters 
+   computed by the convolution over the input.
+\end{enumerate}
+
+In Keras, window/patch size, and output depth are passed as: \\
+
+{
+   \centering
+   \lstinline{Conv2D(output_depth, (window_height, window_width))}
+
+}
+
+\subsubsection{How convolution works (at a high level)}
+\paragraph*{}
+A convolution works in a certain number of steps:
+\begin{enumerate}
+   \item \textbf{sliding down patch windows of 3x3 or 5x5} over 3D input feature map
+   and \textbf{stoping at every possible location, extracting the 3D patch of surrounding features} of shape 
+   \textbf{(window\_height, window\_width, input\_depth)}
+
+   \item Each extracted 3D patch is then \textbf{transformed into a 1D vector of shape (output\_depth), via a tensor product
+   with the same learned weight matrix called the \textit{convolution kernel}}
+
+   \item All of the 1D vectors resulting from the tensor product with the kernel, are then 
+   \textbf{spatially re-assembled} into a 3D output feature map of shape 
+   \lstinline{(height, width, output_depth)}
+
+   \item Every spatial location in the output feature map, corresponds to the same location 
+   in the input feature map. For instance, the bottom right corner of the output, 
+   contains information about the bottom right corner of the input.
+\end{enumerate} 
+
+{
+   \centering
+   \includegraphics[width=12cm]{how_conv_works.png}
+
+}
+
+Output width, and height, may differ from the input width and height for two reasons: 
+\begin{enumerate}
+   \item \textbf{Border effects}
+   \item Use of \textbf{strides}
+\end{enumerate}
+
+\subsubsection{Border effects and padding}
+\paragraph*{}
+Suppose we have a 5 x 5 input featue map, thus 25 tiles in total. With a window/patch size 
+of 3 x 3, there's onlu 9 possible tiles for which we can fit/centre our 3 x 3 window.
+The output feature map, is then of dimension 3 x 3. Thus our map shrinks a little, 
+exactly by two tiles along each dimension. We can see this \textbf{border effect} in play,
+spatial dimensions shrink after each convolution layer.
+
+To mitigate this border effect, thus to get 
+\textbf{output feature maps with the same spatial dimension} as the input, 
+we introduce a technique called \textbf{\textit{padding}}.
+
+\textbf{Padding} involves adding the appropriate number of rows, and, or, columns
+on each side of the input feature map to allow fitting center convolution windows around every 
+input tile. Padding will result in more patches being extracted, thus more 1D tensors 
+after the tensor prodcut to spatially re-assemble. 
+
+In Keras, Conv2D layers inplement padding via the \lstinline{padding} argument.
+Padding argument takes two possible values: \textbf{\lstinline{``valid''} which means only valid window locations 
+will be used, thus no padding}, and \textbf{\lstinline{``same''} which indicates to add padding,
+to achieve an output feature map with the same spatial dimension as the input}.
+
+\subsubsection{Convolution Strides}
+\paragraph*{}
+\textbf{Strides} are the other factor that may affect the spatial dimensions of the output feature  map.
+So far, we've observed convolution windows where centre tiles are contiguous,
+thus the windows slide only one unit horizontally, or vertically.
+However, the distance between two successive windows is a \textbf{parameter 
+of the convolution known as its \textit{stride}}. Stride \textbf{defaults to 1} in Keras,
+which is why our patch windows initially only shift one tile horizontally or vertically during 
+convolution.
+
+Its possible to have \textbf{\textit{strided convolutions}}, so in other words,
+strides \textbf{greater than 1}. To use a stride of $k$ greater than 1, means 
+to \textbf{downsample the width and height of the feature map by a factor} of $k$.
+
+In practise, strides are rarely used, however its good to be familiar with the concept.
+To downsample feature maps, instead of strides, whats usually used is the 
+\textbf{\textit{max-pooling}} operation.
+
+\subsubsection{Max-pooling operation}
+\paragraph*{}
+The purpose of the \textit{max-pooling} operation is to \textbf{aggressively 
+downsample feature maps} much like what we achieve using strides.
+
+Conceptually similar to convolution, max-pooling uses \textbf{2x2 windows to extract patches 
+from the input feature map}. However, unlike convolution, max-pooling operation doesn't 
+perfrom a kernel dot transformation, but instead \textbf{outputs the max vlaue of each channel
+via a hardcoded \textit{max} tensor operation}.
+
+Max-pooling is usually performed with 2x2 windows and a stride of 2, in order 
+to downsample the feature maps by a factor of 2.
+
+\subsubsection{Why downsample feature maps?}
+\paragraph*{}
+Without downsampling, our model \textbf{will not be conducive to learning 
+spatial hierarchies of features.} In other words, the high level patterns learned 
+by convnets will be very small, and insufficient to classify anything. We need features 
+from the last convolution layer to include information about the totality of the input.
+
+Another reason to downsample \textbf{reduce the number of coefficients being after the last 
+convolution layer}. Suppose we begin with an input of shape $(28, 28, 1)$, and 
+the convolution process reduces the spatial axes by a factor of 2 with each layer.
+Without a downsampling operation like max-pooling, after 3 convolution layers, 
+our final output is of shape $(22, 22, 64)$; this final feature map has 
+\textbf{$22 * 22 * 64 = 30,976$} coefficients \textbf{per sample!}
+Now suppose we flatten it to apply a \lstinline{Dense} layer of size 512; this layer 
+would have \textbf{$30,976 * (512+1) \approx 15.8$ million} parameters, which is 
+\textbf{huuuuuugeeee!!!!} Far too large for such a small, trivial model. \\
+
+Ultimately, the reason to downsample is to:
+\begin{enumerate}
+   \item \textbf{induce learning spatial 
+   hierarchies of features, by making successive convolution layers look at increasingly large windows 
+   (in terms of fractions of the initial input)}
+
+   \item \textbf{reduce the number of feature map coefficients}
+\end{enumerate}
+
+
+\paragraph*{}
+Although max-pooling isn't the only way to acheive downsampling, its often 
+the best solution as opposed to alternatives like strides, or something 
+like \textit{average-pooling}.
+
+Because features tend to encode for some high-level presence of some pattern or concept,
+across different windows, of the feature map, it is definitely \textbf{more informative},
+in the context of deep learning, to look at the \textbf{\textit{maximal presence} (max-pooling)}
+of those features, as opposed to the \textit{average presence} (average-pooling).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
