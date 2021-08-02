@@ -1,2 +1,10 @@
 .vscode
 .ipynb_checkpoints
+ideas.py
+./DeepLearning_ML_Fundamentals/Notes/figures
+./**/*.aux
+./**/*.fdb_latexmk
+./**/*.fls
+./**/*.log
+./**/*.synctex.gz
+./**/*.toc
