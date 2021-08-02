@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1623336125 "/Users/williammatrix/Desktop/DL-ML/ComputerVision/Notes.tex" "/Users/williammatrix/Desktop/DL-ML/ComputerVision/Notes.pdf" "Notes" 1623336205
-  "/Users/williammatrix/Desktop/DL-ML/ComputerVision/Notes.aux" 1623336126 206 4aad0bc619ef25ee61042db6c409a40d ""
-  "/Users/williammatrix/Desktop/DL-ML/ComputerVision/Notes.tex" 1623336125 1017 1e280ac3a020541c7ab2a5f52c4d056c ""
+["pdflatex"] 1627919610 "/Users/williammatrix/Desktop/DL-ML/ComputerVision/Notes.tex" "/Users/williammatrix/Desktop/DL-ML/ComputerVision/Notes.pdf" "Notes" 1627919721
+  "/Users/williammatrix/Desktop/DL-ML/ComputerVision/Notes.aux" 1627919610 304 b646f39f24822216f8b85b3cf68887ad ""
+  "/Users/williammatrix/Desktop/DL-ML/ComputerVision/Notes.tex" 1627919609 1041 9f74f59f7c428266150d5cc02da27b20 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -48,13 +48,13 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1586288259 2432462 fd0fa20e9a3cb5f8169fd0ba1c955158 ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "Notes.aux" 1623336126 206 4aad0bc619ef25ee61042db6c409a40d "pdflatex"
-  "Notes.tex" 1623336125 1017 1e280ac3a020541c7ab2a5f52c4d056c ""
-  "Notes.toc" 1623336126 116 7eef6fc21a0bbf2b965843fa345c2132 "pdflatex"
+  "Notes.aux" 1627919610 304 b646f39f24822216f8b85b3cf68887ad "pdflatex"
+  "Notes.tex" 1627919609 1041 9f74f59f7c428266150d5cc02da27b20 ""
+  "Notes.toc" 1627919610 173 003eb4a35ab4473c07609bf7e973b345 "pdflatex"
   (generated)
   "Notes.pdf"
-  "Notes.toc"
+  "/Users/williammatrix/Desktop/DL-ML/ComputerVision/Notes.pdf"
   "Notes.log"
   "Notes.aux"
-  "/Users/williammatrix/Desktop/DL-ML/ComputerVision/Notes.pdf"
   "/Users/williammatrix/Desktop/DL-ML/ComputerVision/Notes.log"
+  "Notes.toc"

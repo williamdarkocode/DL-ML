@@ -5,6 +5,7 @@ a = np.array([0, 2, 4, 6])
 
 # Get dimension of array
 print(a.ndim) #should print 1
+#####
 
 # Get shape of array
 print(a.shape) #should print (4,) meaning 4 dimensions on 0th axis
