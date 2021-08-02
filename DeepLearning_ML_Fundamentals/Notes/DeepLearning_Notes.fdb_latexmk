@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1627522332 "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.tex" "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.pdf" "DeepLearning_Notes" 1627522333
+["pdflatex"] 1627522332 "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.tex" "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.pdf" "DeepLearning_Notes" 1627522347
   "./figures/AI_Umbrella.png" 1623689368 43005 248df2b2da1bae5be8d6ae00e780adc5 ""
   "./figures/ML_new_paradigm.png" 1623854736 19409 21c3b6cce8825a30d998506b3acf0525 ""
   "./figures/dropout_keras_implementation.png" 1626498471 42384 3be2f3f04b36eaa3f902e28353b3b935 ""
@@ -94,9 +94,9 @@
   "figures/training_loop_dnn.png" 1626283912 64027 905ff5953d53769cbaa1bc0293631a25 ""
   "figures/weight_regularizer_instance.png" 1626496472 50482 55268397f873ff5320e2b4211d72afb8 ""
   (generated)
-  "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.log"
+  "DeepLearning_Notes.aux"
   "DeepLearning_Notes.pdf"
   "DeepLearning_Notes.toc"
-  "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.pdf"
-  "DeepLearning_Notes.aux"
   "DeepLearning_Notes.log"
+  "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.pdf"
+  "/Users/williammatrix/Desktop/DL-ML/DeepLearning_ML_Fundamentals/Notes/DeepLearning_Notes.log"
