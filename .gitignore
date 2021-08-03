@@ -1,6 +1,7 @@
 .vscode
 .ipynb_checkpoints
 ideas.py
+datasets
 DeepLearning_ML_Fundamentals/Notes/figures
 
 DeepLearning_ML_Fundamentals/Notes/*.aux
